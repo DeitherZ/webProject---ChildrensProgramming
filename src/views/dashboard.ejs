@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Niveles</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tarjetas = document.querySelectorAll('.sublevel-tarjet');
+            tarjetas.forEach(function(tarjeta) {
+                var calificacionText = tarjeta.querySelector('.calificacion').textContent;
+                var calificacion = parseFloat(calificacionText.split('/')[0]);
+                var progressBar = tarjeta.querySelector('.progress-bar');
+                
+                // Calcula el porcentaje y establece el ancho de la barra de progreso
+                var porcentaje = (calificacion / 5) * 100;
+                progressBar.style.width = porcentaje + '%';
+            });
+        });
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a>Perfil</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <% if (generatedHTML) { %>
+            <h1>Bienvenido, <span id="usernamePlaceholder"><%= user.Usuario %></span></h1>
+            <%- generatedHTML %>
+        <% } else { %>
+            <h2 style="margin-top: 225px;">Upps!! Parece que algo ha salido mal :(.</h2>
+        <% } %>
+        <!--
+        <div class="level-container">
+            <h2>Nivel 1</h2>
+            <div class="sublevel-container">
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 1</p>
+                    <p class="calificacion">10/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 2</p>
+                    <p class="calificacion">4/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 3</p>
+                    <p class="calificacion">7/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 4</p>
+                    <p class="calificacion">2/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 5</p>
+                    <p class="calificacion">9/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 6</p>
+                    <p class="calificacion">4/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="level-container">
+            <h2>Nivel 2</h2>
+            <div class="sublevel-container">
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 1</p>
+                    <p class="calificacion">5/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 2</p>
+                    <p class="calificacion">1/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 3</p>
+                    <p class="calificacion">6/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 4</p>
+                    <p class="calificacion">3/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 5</p>
+                    <p class="calificacion">8/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="level-container">
+            <h2>Nivel 3</h2>
+            <div class="sublevel-container">
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 1</p>
+                    <p class="calificacion">0/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 2</p>
+                    <p class="calificacion">0/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 3</p>
+                    <p class="calificacion">0/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="sublevel-tarjet" onclick="goQuestions('/questions')">
+                    <p>Recorrido 4</p>
+                    <p class="calificacion">0/10</p>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</body>
+<script>
+    function goQuestions(url) {
+        window.location.href = url;
+    }
+</script>
+</html>

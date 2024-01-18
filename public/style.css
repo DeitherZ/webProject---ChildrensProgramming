@@ -1,0 +1,315 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 245); 
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-container{
+    padding: 30px;
+    background: repeating-linear-gradient(-45deg, #F0F0F0, #F0F0F0 2px, rgb(250, 250, 250) 2px,rgb(250, 250, 250) 10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.login-container a{
+    text-decoration: none;
+    font-weight: bold;
+    background-image: linear-gradient(rgb(11, 162, 14), rgb(11, 162, 14));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: 0.5s ease;
+    color: rgb(11, 162, 14);
+    padding-bottom: 2px;
+}
+
+.login-container a:hover{
+    background-size: 100% 2px;
+    transition: 0.5s;
+}
+  
+input{
+    margin-bottom: 20px; 
+    border: none; 
+    background-color: rgb(250, 250, 250); 
+    border-radius: 10px; 
+    font-size: 1.2em;
+    padding: 5px;
+    padding-left: 8px;
+    width: 90%;
+    background-image: linear-gradient(rgb(11, 162, 14), rgb(11, 162, 14));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: 0.5s ease;
+}
+  
+input:focus{
+    outline: none;
+    background-size: 100% 2px;
+    transition: 0.5s;
+}
+  
+button{
+    font-size: 1.2em; 
+    border: none; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); 
+    background-color: rgb(250, 250, 250); 
+    color: black; 
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(11, 21, 162);
+}
+  
+a{
+    text-decoration: none;
+    font-weight: bold;
+    background-image: linear-gradient(black, black);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: 0.5s ease;
+    color: black;
+    padding-bottom: 2px;
+}
+
+a:hover{
+    background-size: 100% 2px;
+    transition: 0.5s;
+}
+  
+ul{
+    list-style: none;
+}
+
+/*Style content*/
+header{
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.459);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0; 
+    z-index: 1000;
+}
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav li{
+    display: inline;
+    margin: 10px;
+}
+
+.container{
+    width: 80%;
+    padding-bottom: 20px;
+    height: auto;
+    top: 60px;
+    position: absolute;
+    text-align: center;
+}
+
+.container h1{
+    margin-bottom: 30px;
+}
+
+.level-container{
+    padding-bottom: 10px;
+}
+
+.level-container h2{
+    background-color: rgb(250, 250, 250);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.788);
+}
+
+.level-container .sublevel-container{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.level-container .sublevel-container .sublevel-tarjet{
+    position: relative;
+    margin: 10px;
+    font-weight: 550;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    width: calc(22.22% - 20px);
+    box-sizing: border-box;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.6); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.level-container .sublevel-container .sublevel-tarjet p{
+    padding: 10px;
+}
+  
+.level-container .sublevel-container .sublevel-tarjet:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgb(11, 21, 162);
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(to right, #0ba20e, #0ba20e); /* Cambia estos colores según tus preferencias */
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+    display: none; 
+}
+  
+.message-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+    display: none;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.6); 
+    text-align: center; 
+    align-items: center;
+}
+
+/*Diseño para la pagina de preguntas*/
+.questions-container{
+    width: 90%;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.subcontainer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 200px;
+    position: relative;
+}
+
+.button-back {
+    position: absolute;
+    left: 0; /* Ajusta según sea necesario */
+}
+
+.button-back:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.progress {
+    flex-grow: 1;
+    position: relative;
+}
+
+.progress h2{
+    margin: 10px;
+} 
+
+.progress .progress-bar{
+    border-radius: 5px;
+}
+
+.subcontainer-mid{
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.subcontainer-mid p{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.subcontainer-bot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Distribuye los elementos en los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.subcontainer-bot .skip {
+    order: 1; /* Cambia el orden del botón Saltar */
+}
+
+.subcontainer-bot .skip:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.answers-container {
+    order: 2; /* Cambia el orden de answers-container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcontainer-bot .next {
+    order: 3; /* Cambia el orden del botón Siguiente */
+}
+
+.answer {
+    position: relative;
+    width: 200px; 
+    padding: 10px;
+    height: auto;
+    font-weight: 600;
+    margin: 0 10px;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.answer:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 0 15px rgb(11, 21, 162);
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar sesión</h1>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Usuario" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Contraseña" autocomplete="off">
+            </div>
+            <button type="submit">Iniciar sesión</button>
+            <p>¿No tienes una cuenta? <a href="/register">Regístrate</a></p>
+        </form>
+    </div>
+</body>
+</html>
